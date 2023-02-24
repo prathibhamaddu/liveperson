@@ -30,7 +30,9 @@ async function postData(url = '', auth, data = {}) {
   
     // Get data from form
     const name = document.querySelector('input[name="user_name"]').value;
-    const password = document.getElementById('password').value;;
+      const password = document.getElementById('password').value;
+const plainTextPassword = password; 
+
   
     // use correct domain for your region
     const domain = 'https://va.bc-intg.liveperson.net/thirdparty-services-0.1/webview';
@@ -46,7 +48,7 @@ async function postData(url = '', auth, data = {}) {
       message: "request successful", // optional
       contextVariables: [
         {"name": "name", "value": name},
-        {"password": "password", "value": password}
+        {"password": "password", "value": plainTextPassword}
       ],
     });
   }
