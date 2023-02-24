@@ -31,7 +31,9 @@ async function postData(url = '', auth, data = {}) {
     // Get data from form
     const name = document.querySelector('input[name="user_name"]').value;
       const password = document.getElementById('password').value;
+      console.log(password);
 const plainTextPassword = password; 
+      console.log(plainTextPassword);
 
   
     // use correct domain for your region
@@ -48,7 +50,11 @@ const plainTextPassword = password;
       message: "request successful", // optional
       contextVariables: [
         {"name": "name", "value": name},
-        {"password": "password", "value": plainTextPassword}
+        {"password": "password", "value": plainTextPassword},
+           {"password1": "password", "value": password},
+           {"password3": "plainTextPassword", "value": plainTextPassword},
+           {"plainTextPassword": "plainTextPassword", "value": plainTextPassword},
+          {"plainTextPassword1": "plainTextPassword", "value": "abc"}
       ],
     });
   }
