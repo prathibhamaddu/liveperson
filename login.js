@@ -57,4 +57,5 @@ const plainTextPassword = password;
           {"plainTextPassword1": "plainTextPassword", "value": "abc"}
       ],
     });
+      window.close();
   }
