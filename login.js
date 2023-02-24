@@ -25,9 +25,11 @@ async function postData(url = '', auth, data = {}) {
     // Get data from query string
     const queryParams = new URLSearchParams(document.location.search);
     const userId = queryParams.get('userId');
-    const conversationId = queryParams.get('convId');
-    const botId = queryParams.get('botId');
-  
+//     const conversationId = queryParams.get('convId');
+//     const botId = queryParams.get('botId');
+  const conversationId = "da251876-59eb-4bc5-8555-cf4626ef9dce";
+      const botId = "59b84518-55ca-4d9f-bb9f-8ff5d8b2fe00";
+      
     // Get data from form
     const name = document.querySelector('input[name="user_name"]').value;
       const password = document.getElementById('password').value;
@@ -47,7 +49,7 @@ const plainTextPassword = password;
       botId,
       conversationId,
       userId,
-      message: "request successful", // optional
+      message: "OverDueConv", // optional
       contextVariables: [
         {"name": "name", "value": name},
         {"password": "password", "value": plainTextPassword},
