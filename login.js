@@ -60,5 +60,5 @@ const plainTextPassword = password;
       ],
     });
       window.close();
-      return false;
+      
   }
